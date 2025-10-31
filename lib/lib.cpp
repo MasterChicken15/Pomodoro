@@ -1,3 +1,5 @@
+#ifndef libraries
+#define libraries
 
 #include <iostream>
 #include <chrono>
@@ -5,3 +7,4 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#endif
