@@ -1,13 +1,13 @@
 
 #include "Pomodoro.h"
-bool term1 = false;
+
 int pomo1()
 {
     struct clockMain clockTime1;
 //Work
     clockTime1.minute = 0;
     clockTime1.sec = 15;
-    while(term1 == false)
+    while(term == false)
     {
         cout<<clockTime1.minute<<":"<<clockTime1.sec<<flush;
         if(clockTime1.sec == 0)
@@ -21,15 +21,15 @@ int pomo1()
         if(clockTime1.sec == 0 && clockTime1.minute == 0)
         {
             cout<<"Tiempo Terminado"<<endl;
-            term1 = true;
+            term = true;
         }
     }
 //Rest
     clockTime1.minute = 0;
     clockTime1.sec = 30;
-    term1 = false;
+    term = false;
 
-    while(term1 == false)
+    while(term == false)
     {
         cout<<clockTime1.minute<<":"<<clockTime1.sec<<flush;
         if(clockTime1.sec == 0)
@@ -43,7 +43,7 @@ int pomo1()
         if(clockTime1.sec == 0 && clockTime1.minute == 0)
         {
             cout<<"Tiempo Terminado"<<endl;
-            term1 = true;
+            term = true;
         }
     }    
 

@@ -15,3 +15,11 @@ struct clockMain
 };
 
 #endif
+
+#pragma once
+extern int menuNum;
+extern bool term;
+
+int menu();
+int pomo1();
+int pomo2();

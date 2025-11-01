@@ -1,8 +1,5 @@
 
 #include "Pomodoro.h"
-#include "pomo25.cpp"
-#include "pomo50.cpp"
-#include "menu.cpp"
 
 int main()
 {

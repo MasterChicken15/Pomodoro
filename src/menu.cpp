@@ -1,6 +1,5 @@
 
 #include "Pomodoro.h"
-int menuNum;
 
 int menu()
 {
