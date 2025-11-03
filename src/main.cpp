@@ -11,7 +11,7 @@ int main()
             break;
 
         case 2:
-        pomo2();
+        
             break;
 
         default:

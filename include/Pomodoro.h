@@ -10,14 +10,14 @@ using namespace std;
 
 struct clockMain
 {
-    int minute;
-    int sec;
+    string minute;
+    string sec;
 };
 
 #endif
 
 #pragma once
-extern string numbers[61];
+extern string numbers[60];
 extern int menuNum;
 extern bool term;
 
