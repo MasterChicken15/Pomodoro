@@ -17,6 +17,7 @@ struct clockMain
 #endif
 
 #pragma once
+extern string numbers[61];
 extern int menuNum;
 extern bool term;
 
