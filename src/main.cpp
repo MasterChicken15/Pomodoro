@@ -3,23 +3,25 @@
 
 int main()
 {
-    menu();
-    switch(menuNum)
-    {
-        case 1:
-        pomo1();
-            break;
+    while(exibool == false){
+        menu();
+        switch(menuNum)
+        {
+            case 1:
+            pomo1();
+            rep();
+                break;
 
-        case 2:
-            break;
+            case 2:
+            pomo2();
+            rep();
+                break;
 
-        case 3:
-        cout<<"Opción no encontrada";
-            break;
+            default:
+            return 0;
+                break;
 
-        default:
-
-            break;
+        }
     }
-    system("pause");
+    return 0;
 }
