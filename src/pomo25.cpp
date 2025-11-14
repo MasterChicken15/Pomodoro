@@ -1,59 +1,92 @@
 
 #include "Pomodoro.h"
-int m1 = 34;
-int s1 = 60;
-int md1 = 6;
-int sd1 = 0;
 
 int pomo1()
 {
     struct clockMain clockTime1;
 //Work
-    clockTime1.minute = numbers[m1];
-    clockTime1.sec = numbers[s1];
+    clockTime1.minute1 = 2;
+    clockTime1.minute2 = 5;
+    clockTime1.sec1 = 0;
+    clockTime1.sec2 = 0;
+
+    cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
     while(term == false)
     {
-        cout<<numbers[m1]<<":"<<numbers[s1]<<"\n";
-        if(numbers[s1] == "00")
-        {
-            m1-=1;
-            clockTime1.minute = numbers[m1];
-            s1 = 0;
-            clockTime1.sec = numbers[s1];
-        }
-        s1+=1;
-        clockTime1.sec = numbers[s1];
-        this_thread::sleep_for(chrono::seconds(1));
-        
-        if(clockTime1.sec == "00" && clockTime1.minute == "00")
-        {
+        if(clockTime1.minute1 == 0 && clockTime1.minute2 == 0 && clockTime1.sec1 == 0 && clockTime1.sec2 == 0){
+            this_thread::sleep_for(chrono::seconds(0));
             cout<<"Tiempo Terminado"<<endl;
             term = true;
+        }if(clockTime1.minute1 != 0 && clockTime1.minute2 == 0 && clockTime1.sec1 == 0 && clockTime1.sec2 == 0){
+            clockTime1.minute1--;
+            clockTime1.minute2 = 9;
+            clockTime1.sec1 = 5;
+            clockTime1.sec2 = 9;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
+        }if(clockTime1.minute1 != 0 && clockTime1.minute2 == 0){
+            clockTime1.minute1--;
+            clockTime1.minute2 = 9;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
+        }if(clockTime1.sec1 != 0 && clockTime1.sec2 == 0){
+            clockTime1.sec1--;
+            clockTime1.sec2 = 9;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
+        }if(clockTime1.sec1 == 0 && clockTime1.sec2 == 0 && clockTime1.minute2 != 0){
+            clockTime1.minute2--;
+            clockTime1.sec1 = 5;
+            clockTime1.sec2 = 9;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
+        }if(clockTime1.sec2 > 0){
+            clockTime1.sec2--;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
         }
     }
 //Rest
-    clockTime1.minute = numbers[md1];
-    clockTime1.sec = numbers[sd1];
-    term = false;
+    clockTime1.minute1 = 0;
+    clockTime1.minute2 = 5;
+    clockTime1.sec1 = 0;
+    clockTime1.sec2 = 0;
 
+    cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
     while(term == false)
     {
-        cout<<clockTime1.minute<<":"<<clockTime1.sec<<flush;
-        if(clockTime1.sec == "00")
-        {
-            clockTime1.minute = numbers[md1-1];
-            sd1 = 60;
-            clockTime1.sec = numbers[sd1];
-        }
-        clockTime1.sec = numbers[sd1-1];
-        this_thread::sleep_for(chrono::seconds(1));
-        cout<<"\b\b\b\b\b \b\b\b\b\b"; 
-        if(clockTime1.sec == "00" && clockTime1.minute == "00")
-        {
+        if(clockTime1.minute1 == 0 && clockTime1.minute2 == 0 && clockTime1.sec1 == 0 && clockTime1.sec2 == 0){
+            this_thread::sleep_for(chrono::seconds(0));
             cout<<"Tiempo Terminado"<<endl;
             term = true;
+        }if(clockTime1.minute1 != 0 && clockTime1.minute2 == 0 && clockTime1.sec1 == 0 && clockTime1.sec2 == 0){
+            clockTime1.minute1--;
+            clockTime1.minute2 = 9;
+            clockTime1.sec1 = 5;
+            clockTime1.sec2 = 9;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
+        }if(clockTime1.minute1 != 0 && clockTime1.minute2 == 0){
+            clockTime1.minute1--;
+            clockTime1.minute2 = 9;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
+        }if(clockTime1.sec1 != 0 && clockTime1.sec2 == 0){
+            clockTime1.sec1--;
+            clockTime1.sec2 = 9;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
+        }if(clockTime1.sec1 == 0 && clockTime1.sec2 == 0 && clockTime1.minute2 != 0){
+            clockTime1.minute2--;
+            clockTime1.sec1 = 5;
+            clockTime1.sec2 = 9;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
+        }if(clockTime1.sec2 > 0){
+            clockTime1.sec2--;
+            this_thread::sleep_for(chrono::seconds(1));
+            cout<<clockTime1.minute1<<clockTime1.minute2<<":"<<clockTime1.sec1<<clockTime1.sec2<<"\n";
         }
-    }    
-
+    }
     return 0;
 }

@@ -1,13 +1,12 @@
 
 #include "Pomodoro.h"
 
-int menu()
-{
-    for(int i = 0; i <= 100; i++)
-    {
+int menu(){
+    for(int i = 0; i <= 100; i++){
     cout<<"\rStarting Pomodoro "<<i<<"%"<<flush;
     this_thread::sleep_for(chrono::milliseconds(20));
     }
+    
     cout<<endl<<endl;
 
     cout<<"<===========================================================================>"<<endl;
@@ -24,5 +23,9 @@ int menu()
     cout<<"\t3. Exit"<<endl;
     cout<<"<===========================================================================>"<<endl;
     cin>>menuNum;
+    return 0;
+}
+
+int rep(){
     return 0;
 }

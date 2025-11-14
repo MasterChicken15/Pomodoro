@@ -10,8 +10,10 @@ using namespace std;
 
 struct clockMain
 {
-    string minute;
-    string sec;
+    int minute1;
+    int minute2;
+    int sec1;
+    int sec2;
 };
 
 #endif
@@ -24,3 +26,4 @@ extern bool term;
 int menu();
 int pomo1();
 int pomo2();
+int rep();
